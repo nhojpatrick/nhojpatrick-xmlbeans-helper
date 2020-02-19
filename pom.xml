@@ -127,6 +127,20 @@
 						<failOnViolation>true</failOnViolation>
 						<failsOnError>false</failsOnError>
 						<logViolationsToConsole>true</logViolationsToConsole>
+						<checkstyleRules>
+							<module name="Checker">
+								<!-- Checks for Size Violations.                             -->
+								<!-- See https://checkstyle.sourceforge.io/config_sizes.html -->
+								<module name="LineLength">
+									<property name="fileExtensions" value="java"></property>
+									<property name="max" value="120"></property>
+									<property name="ignorePattern" value="^package.*|^import.*|.*LOGGER.*"></property>
+								</module>
+								<!-- Checks for whitespace                               -->
+								<!-- See http://checkstyle.sf.net/config_whitespace.html -->
+								<module name="FileTabCharacter"></module>
+							</module>
+						</checkstyleRules>
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -420,12 +434,31 @@
 											</limit>
 										</limits>
 									</rule>
+									<!--										<rule>-->
+									<!--											<element>CLASS</element>-->
+									<!--											<excludes>-->
+									<!--												<exclude>*Test</exclude>-->
+									<!--												<exclude>*IT</exclude>-->
+									<!--											</excludes>-->
+									<!--											<limits>-->
+									<!--												<limit>-->
+									<!--													<counter>LINE</counter>-->
+									<!--													<value>COVEREDRATIO</value>-->
+									<!--													<minimum>${jacoco.class.line.coveredratio}</minimum>-->
+									<!--												</limit>-->
+									<!--												<limit>-->
+									<!--													<counter>CLASS</counter>-->
+									<!--													<value>MISSEDCOUNT</value>-->
+									<!--													<maximum>${jacoco.class.class.missedcount}</maximum>-->
+									<!--												</limit>-->
+									<!--											</limits>-->
+									<!--										</rule>-->
 								</rules>
 								<!--<haltOnFailure>false</haltOnFailure>-->
 							</configuration>
 						</execution>
 						<execution>
-							<id>default-report</id>
+							<id>jacoco-report</id>
 							<phase>site</phase>
 							<goals>
 								<goal>report</goal>
@@ -473,7 +506,7 @@
 		<profile>
 			<id>qa_checkstyle</id>
 			<build>
-				<defaultGoal>verify</defaultGoal>
+				<defaultGoal>validate</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -562,7 +595,6 @@
 		<profile>
 			<id>qa_pmd</id>
 			<build>
-				<defaultGoal>verify</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -589,7 +621,6 @@
 		<profile>
 			<id>qa_spotbugs</id>
 			<build>
-				<defaultGoal>verify</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>com.github.spotbugs</groupId>
@@ -597,7 +628,7 @@
 						<executions>
 							<execution>
 								<id>spotbugs-check</id>
-								<phase>verify</phase>
+								<phase>validate</phase>
 								<goals>
 									<goal>check</goal>
 								</goals>
@@ -621,6 +652,9 @@
 					</plugin>
 				</plugins>
 			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
 		</profile>
 		<profile>
 			<id>deployableArtifacts</id>
