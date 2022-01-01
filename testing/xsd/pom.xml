@@ -10,8 +10,11 @@
 		<relativePath>..</relativePath>
 	</parent>
 	<!--groupId / -->
+	<!--artifactId / -->
 	<artifactId>xmlbeans-helper-testing-xsd</artifactId>
+	<!--packaging / -->
 	<packaging>jar</packaging>
+	<!--name / -->
 	<name>XMLBeans Helper Testing Xsd</name>
 	<!--version / -->
 	<!--description / -->
@@ -26,6 +29,7 @@
 	<!--licenses / -->
 	<!--scm / -->
 	<!--organization / -->
+	<!--build / -->
 	<build>
 		<plugins>
 			<plugin>

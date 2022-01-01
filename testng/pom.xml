@@ -10,10 +10,14 @@
 		<relativePath>..</relativePath>
 	</parent>
 	<!--groupId / -->
+	<!--artifactId / -->
 	<artifactId>xmlbeans-helper-for-testng</artifactId>
+	<!--packaging / -->
 	<packaging>jar</packaging>
+	<!--name / -->
 	<name>XMLBeans Helper for TestNG</name>
 	<!--version / -->
+	<!--description / -->
 	<description>XMLBeans Helper for testing using TestNG, extension for assertTrue and assertFalse when wanting to check if a XmlObject is validate or not and, if invalid print violations if should be valid</description>
 	<!--url / -->
 	<!--prerequisites / -->
@@ -31,6 +35,7 @@
 	<!--modules / -->
 	<!--repositories / -->
 	<!--pluginRepositories / -->
+	<!--dependencies / -->
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>

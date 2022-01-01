@@ -10,12 +10,16 @@
 		<relativePath>..</relativePath>
 	</parent>
 	<!--groupId / -->
+	<!--artifactId / -->
 	<artifactId>xmlbeans-helper-testing-parent</artifactId>
+	<!--packaging / -->
 	<packaging>pom</packaging>
+	<!--name / -->
 	<name>XMLBeans Helper Testing Parent</name>
 	<!--version / -->
 	<!--description / -->
 	<!--url / -->
+	<!--prerequisites / -->
 	<!--issueManagement / -->
 	<!--ciManagement / -->
 	<!--inceptionYear / -->
@@ -27,6 +31,7 @@
 	<!--organization / -->
 	<!--build / -->
 	<!--profiles / -->
+	<!--modules / -->
 	<modules>
 		<module>xmlbeans</module>
 		<module>xsd</module>
@@ -38,5 +43,6 @@
 	<!--reporting / -->
 	<!--dependencyManagement / -->
 	<!--distributionManagement / -->
+	<!--properties / -->
 	<properties />
 </project>
