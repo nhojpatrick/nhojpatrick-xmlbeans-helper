@@ -411,7 +411,7 @@
 		<plugins.maven.maven-pmd-plugin>3.15.0</plugins.maven.maven-pmd-plugin>
 		<plugins.maven.maven-remote-resources-plugin>1.7.0</plugins.maven.maven-remote-resources-plugin>
 		<plugins.maven.maven-resources-plugin>2.7</plugins.maven.maven-resources-plugin>
-		<plugins.maven.maven-site-plugin>3.4</plugins.maven.maven-site-plugin>
+		<plugins.maven.maven-site-plugin>3.10.0</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-surefire-plugin>2.19</plugins.maven.maven-surefire-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
