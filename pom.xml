@@ -155,7 +155,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.4</version>
+					<version>${plugins.maven.maven-site-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -281,7 +281,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.4</version>
+				<version>${plugins.maven.maven-site-plugin}</version>
 				<configuration>
 					<locales>en</locales>
 				</configuration>
@@ -368,6 +368,7 @@
 		<plugins.maven.maven-pmd-plugin>3.6</plugins.maven.maven-pmd-plugin>
 		<plugins.maven.maven-remote-resources-plugin>1.2.1</plugins.maven.maven-remote-resources-plugin>
 		<plugins.maven.maven-resources-plugin>2.7</plugins.maven.maven-resources-plugin>
+		<plugins.maven.maven-site-plugin>3.4</plugins.maven.maven-site-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
