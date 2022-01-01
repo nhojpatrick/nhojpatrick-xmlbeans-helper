@@ -349,7 +349,7 @@
 		<!-- custom properties -->
 		<project.custom.encoding>UTF-8</project.custom.encoding>
 		<project.custom.java.version>1.8</project.custom.java.version>
-		<!-- override maven properties -->
+		<!-- maven user properties -->
 		<maven.test.failure.ignore>false</maven.test.failure.ignore>
 		<maven.compiler.source>${project.custom.java.version}</maven.compiler.source>
 		<maven.compiler.target>${project.custom.java.version}</maven.compiler.target>
