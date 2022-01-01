@@ -49,9 +49,9 @@
 	</licenses>
 	<!--scm / -->
 	<scm>
-		<connection>scm:git:http://github.com/nhojpatrick/nhojpatrick-xmlbeans-helper.git</connection>
-		<developerConnection>scm:git:git@github.com:nhojpatrick/nhojpatrick-xmlbeans-helper.git</developerConnection>
-		<url>https://github.com/nhojpatrick/nhojpatrick-xmlbeans-helper</url>
+		<connection>scm:git:git://github.com/nhojpatrick/nhojpatrick-xmlbeans-helper.git</connection>
+		<developerConnection>scm:git:ssh://github.com:nhojpatrick/nhojpatrick-xmlbeans-helper.git</developerConnection>
+		<url>https://github.com/nhojpatrick/nhojpatrick-xmlbeans-helper/tree/main</url>
 	</scm>
 	<!--organization / -->
 	<!--build / -->
