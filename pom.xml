@@ -359,7 +359,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<plugins.maven.maven-checkstyle-plugin>2.17</plugins.maven.maven-checkstyle-plugin>
-		<plugins.maven.maven-clean-plugin>3.0.0</plugins.maven.maven-clean-plugin>
+		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.3</plugins.maven.maven-compiler-plugin>
 		<plugins.maven.maven-deploy-plugin>2.8.2</plugins.maven.maven-deploy-plugin>
 		<plugins.maven.maven-install-plugin>2.5.2</plugins.maven.maven-install-plugin>
