@@ -7,6 +7,7 @@ Helpers for testing of XMLBeans
 [![CircleCI](https://circleci.com/gh/nhojpatrick/nhojpatrick-xmlbeans-helper/tree/develop.svg?style=svg)](https://circleci.com/gh/nhojpatrick/nhojpatrick-xmlbeans-helper/tree/develop)
 [![Coverage Status](https://coveralls.io/repos/github/nhojpatrick/nhojpatrick-xmlbeans-helper/badge.svg?branch=develop)](https://coveralls.io/github/nhojpatrick/nhojpatrick-xmlbeans-helper?branch=develop)
 [![Known Vulnerabilities](https://snyk.io/test/github/nhojpatrick/nhojpatrick-xmlbeans-helper/develop/badge.svg)](https://snyk.io/test/github/nhojpatrick/nhojpatrick-xmlbeans-helper/develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f1174c0135dd7ca1b325/maintainability)](https://codeclimate.com/github/nhojpatrick/nhojpatrick-xmlbeans-helper/maintainability)
 
 ## Building
 
