@@ -46,7 +46,7 @@
 			<artifactId>xmlbeans</artifactId>
 		</dependency>
 	</dependencies>
-	<!--reports / (Deprecated. Now ignored by Maven. ) -->
+	<!--reports (Deprecated) / -->
 	<!--reporting / -->
 	<!--dependencyManagement / -->
 	<!--distributionManagement / -->

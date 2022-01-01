@@ -84,7 +84,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<!--reports / -->
+	<!--reports (Deprecated) / -->
 	<!--reporting / -->
 	<!--dependencyManagement / -->
 	<!--distributionManagement / -->

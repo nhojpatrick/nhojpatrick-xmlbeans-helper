@@ -223,7 +223,7 @@
 	<!--repositories / -->
 	<!--pluginRepositories / -->
 	<!--dependencies / -->
-	<!--reports / (Deprecated. Now ignored by Maven. ) -->
+	<!--reports (Deprecated) / -->
 	<reporting>
 		<plugins>
 			<plugin>
