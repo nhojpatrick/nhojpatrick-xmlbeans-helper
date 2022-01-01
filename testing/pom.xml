@@ -12,20 +12,20 @@
 	<artifactId>xmlbeans-helper-testing-parent</artifactId>
 	<packaging>pom</packaging>
 	<name>XMLBeans Helper Testing Parent</name>
-	<!--version/ -->
-	<!--description/ -->
-	<!--url/ -->
+	<!--version / -->
+	<!--description / -->
+	<!--url / -->
 	<!--issueManagement / -->
 	<!--ciManagement / -->
-	<!--inceptionYear/ -->
+	<!--inceptionYear / -->
 	<!--mailingLists / -->
-	<!--developers/ -->
+	<!--developers / -->
 	<!--contributors / -->
 	<!--licenses / -->
 	<!--scm / -->
 	<!--organization / -->
-	<!--build/ -->
-	<!--profiles/ -->
+	<!--build / -->
+	<!--profiles / -->
 	<modules>
 		<module>xmlbeans</module>
 		<module>xsd</module>
@@ -34,8 +34,8 @@
 	<!--pluginRepositories / -->
 	<!--dependencies / -->
 	<!--reports / (Deprecated. Now ignored by Maven. ) -->
-	<!--reporting/ -->
-	<!--dependencyManagement/ -->
+	<!--reporting / -->
+	<!--dependencyManagement / -->
 	<!--distributionManagement / -->
 	<properties />
 </project>
