@@ -145,7 +145,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-remote-resources-plugin</artifactId>
-					<version>1.2.1</version>
+					<version>${plugins.maven.maven-remote-resources-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -366,6 +366,7 @@
 		<plugins.maven.maven-jar-plugin>2.6</plugins.maven.maven-jar-plugin>
 		<plugins.maven.maven-javadoc-plugin>2.10.3</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-pmd-plugin>3.6</plugins.maven.maven-pmd-plugin>
+		<plugins.maven.maven-remote-resources-plugin>1.2.1</plugins.maven.maven-remote-resources-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
