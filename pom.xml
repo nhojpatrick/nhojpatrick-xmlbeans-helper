@@ -51,7 +51,6 @@
 	<scm>
 		<connection>scm:git:http://github.com/nhojpatrick/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:nhojpatrick/${project.artifactId}.git</developerConnection>
-		<tag>HEAD</tag>
 		<url>http://github.com/nhojpatrick/${project.artifactId}</url>
 	</scm>
 	<!--organization / -->
