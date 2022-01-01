@@ -1,21 +1,4 @@
+# ignore file
+
 # maven
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-
-# mac
-.DS_Store
-
-# windows
-Thumbs.db
-
-# eclipse
-.classpath
-.project
-.settings/
-test-output/
