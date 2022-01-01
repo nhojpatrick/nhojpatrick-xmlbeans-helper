@@ -60,6 +60,18 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>com.github.ekryd.sortpom</groupId>
+					<artifactId>sortpom-maven-plugin</artifactId>
+					<version>${plugins.com.github.ekryd.sortpom.sortpom-maven-plugin}</version>
+					<dependencies>
+						<dependency>
+							<groupId>com.github.nhojpatrick.qa</groupId>
+							<artifactId>nhojpatrick-sortpom-sortorderfile</artifactId>
+							<version>[1.0.0,1.0.999)</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
 					<version>${plugins.maven.maven-checkstyle-plugin}</version>
@@ -239,6 +251,30 @@
 				</plugins>
 			</build>
 		</profile>
+		<profile>
+			<id>sortpom</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<defaultGoal>validate</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>com.github.ekryd.sortpom</groupId>
+						<artifactId>sortpom-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sortpom-sort</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>sort</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 	<!--modules / -->
 	<modules>
@@ -365,6 +401,7 @@
 		<!-- plugin versions -->
 		<plugins.codehaus.build-helper-maven-plugin>1.10</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.8.1</plugins.codehaus.versions-maven-plugin>
+		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>3.0.1</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
 		<plugins.maven.maven-checkstyle-plugin>2.17</plugins.maven.maven-checkstyle-plugin>
 		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.8.1</plugins.maven.maven-compiler-plugin>
@@ -381,6 +418,14 @@
 		<!-- qa user properties -->
 		<!-- checkstyle -->
 		<!-- sortpom -->
+		<sort.createBackupFile>false</sort.createBackupFile>
+		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
+		<sort.pomFile>pom.xml</sort.pomFile>
+		<sort.sortDependencies>groupId,artifactId,version,scope</sort.sortDependencies>
+		<sort.sortModules>true</sort.sortModules>
+		<sort.sortOrderFile>com/github/nhojpatrick/qa/sortpom/sortorderfile/sortorderfile.xml</sort.sortOrderFile>
+		<sort.sortPlugins>groupId,artifactId,version,scope</sort.sortPlugins>
+		<sort.sortProperties>false</sort.sortProperties>
 		<!-- versions-maven-plugin -->
 		<!-- JPMS -->
 	</properties>
