@@ -100,7 +100,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.2</version>
+					<version>${plugins.maven.maven-install-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -361,6 +361,7 @@
 		<plugins.maven.maven-clean-plugin>3.0.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.3</plugins.maven.maven-compiler-plugin>
 		<plugins.maven.maven-deploy-plugin>2.8.2</plugins.maven.maven-deploy-plugin>
+		<plugins.maven.maven-install-plugin>2.5.2</plugins.maven.maven-install-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
