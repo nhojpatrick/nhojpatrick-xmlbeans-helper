@@ -6,6 +6,7 @@ Helpers for testing of XMLBeans
 ![Maven Central](https://img.shields.io/maven-central/v/com.github.nhojpatrick.xmlbeans/nhojpatrick-xmlbeans-helper)
 [![CircleCI](https://circleci.com/gh/nhojpatrick/nhojpatrick-xmlbeans-helper/tree/develop.svg?style=svg)](https://circleci.com/gh/nhojpatrick/nhojpatrick-xmlbeans-helper/tree/develop)
 [![Coverage Status](https://coveralls.io/repos/github/nhojpatrick/nhojpatrick-xmlbeans-helper/badge.svg?branch=develop)](https://coveralls.io/github/nhojpatrick/nhojpatrick-xmlbeans-helper?branch=develop)
+[![Known Vulnerabilities](https://snyk.io/test/github/nhojpatrick/nhojpatrick-xmlbeans-helper/develop/badge.svg)](https://snyk.io/test/github/nhojpatrick/nhojpatrick-xmlbeans-helper/develop)
 
 ## Building
 
