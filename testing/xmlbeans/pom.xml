@@ -13,7 +13,6 @@
 	<!--artifactId / -->
 	<artifactId>xmlbeans-helper-testing-xmlbeans</artifactId>
 	<!--packaging / -->
-	<packaging>jar</packaging>
 	<!--name / -->
 	<name>XMLBeans Helper Testing XmlBeans</name>
 	<!--version / -->

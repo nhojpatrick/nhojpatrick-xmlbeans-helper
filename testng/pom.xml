@@ -13,7 +13,6 @@
 	<!--artifactId / -->
 	<artifactId>xmlbeans-helper-for-testng</artifactId>
 	<!--packaging / -->
-	<packaging>jar</packaging>
 	<!--name / -->
 	<name>XMLBeans Helper for TestNG</name>
 	<!--version / -->

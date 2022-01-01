@@ -13,7 +13,6 @@
 	<!--artifactId / -->
 	<artifactId>xmlbeans-helper-testing-xsd</artifactId>
 	<!--packaging / -->
-	<packaging>jar</packaging>
 	<!--name / -->
 	<name>XMLBeans Helper Testing Xsd</name>
 	<!--version / -->
