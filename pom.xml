@@ -110,7 +110,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10.3</version>
+					<version>${plugins.maven.maven-javadoc-plugin}</version>
 					<configuration>
 						<tags>
 							<tag>
@@ -256,7 +256,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10.3</version>
+				<version>${plugins.maven.maven-javadoc-plugin}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -363,6 +363,7 @@
 		<plugins.maven.maven-deploy-plugin>2.8.2</plugins.maven.maven-deploy-plugin>
 		<plugins.maven.maven-install-plugin>2.5.2</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>2.6</plugins.maven.maven-jar-plugin>
+		<plugins.maven.maven-javadoc-plugin>2.10.3</plugins.maven.maven-javadoc-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
