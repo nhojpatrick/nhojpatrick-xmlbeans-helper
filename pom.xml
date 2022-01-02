@@ -291,6 +291,14 @@
 	<!--profiles / -->
 	<profiles>
 		<profile>
+			<id>cicd</id>
+			<properties>
+				<downloadJavadocs>false</downloadJavadocs>
+				<downloadSources>false</downloadSources>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
+		<profile>
 			<id>codequality</id>
 			<build>
 				<plugins>
