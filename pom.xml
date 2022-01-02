@@ -283,6 +283,11 @@
 					<version>${plugins.maven.maven-toolchains-plugin}</version>
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-wrapper-plugin</artifactId>
+					<version>${plugins.maven.maven-wrapper-plugin}</version>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>${plugins.codehaus.build-helper-maven-plugin}</version>
@@ -571,6 +576,33 @@
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
+		<profile>
+			<id>wrapper</id>
+			<build>
+				<defaultGoal>validate</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-wrapper-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>wrapper-latest</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>wrapper</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<downloadJavadocs>false</downloadJavadocs>
+				<downloadSources>false</downloadSources>
+				<includeDebug>true</includeDebug>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
 	</profiles>
 	<!--modules / -->
 	<modules>
@@ -715,6 +747,7 @@
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>2.19</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.maven.maven-wrapper-plugin>3.1.0</plugins.maven.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.7</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
