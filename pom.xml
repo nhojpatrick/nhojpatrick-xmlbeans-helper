@@ -335,6 +335,30 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>qa_checkstyle</id>
+			<build>
+				<defaultGoal>verify</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-checkstyle-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>checkstyle-check</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
+		<profile>
 			<id>codequality</id>
 			<build>
 				<plugins>
