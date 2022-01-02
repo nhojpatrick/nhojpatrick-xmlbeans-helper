@@ -60,6 +60,7 @@
 							<goal>xmlbeans</goal>
 						</goals>
 						<configuration>
+							<javaSource>${project.custom.java.version}</javaSource>
 							<schemaDirectory>${basedir}/target/maven-shared-archive-resources</schemaDirectory>
 						</configuration>
 					</execution>
