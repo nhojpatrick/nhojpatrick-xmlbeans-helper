@@ -2,6 +2,39 @@ version: 2.1
 
 commands:
 
+  setup_std_toolchain:
+    description: "Setup ToolChain for multiple OpenJdk versions"
+    steps:
+      - run: mkdir ~/.m2
+      - run: |
+          cat > ~/.m2/toolchains.xml \<< EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>1.8</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-1.8</id>
+              </provides>
+              <configuration>
+                <jdkHome>/usr/local/jdk-8.0.312</jdkHome>
+              </configuration>
+            </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>11</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-11</id>
+              </provides>
+              <configuration>
+                <jdkHome>/usr/local/openjdk-11</jdkHome>
+              </configuration>
+            </toolchain>
+          </toolchains>
+          EOF
+
   std_mvnw_jdk8:
     description: "Standard JDK8 mvnw steps"
     steps:
@@ -83,6 +116,7 @@ jobs:
       - image: cimg/openjdk:8.0
     resource_class: small
     steps:
+      - setup_std_toolchain
       - checkout
       - cache_restore:
           cacheAlphaName: jdk8
