@@ -254,6 +254,13 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
 					<version>${plugins.codehaus.versions-maven-plugin}</version>
+					<dependencies>
+						<dependency>
+							<groupId>com.github.nhojpatrick.qa</groupId>
+							<artifactId>nhojpatrick-versions-ruleset</artifactId>
+							<version>[1.0.0,1.0.999)</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -523,6 +530,7 @@
 		<sort.sortPlugins>groupId,artifactId,version,scope</sort.sortPlugins>
 		<sort.sortProperties>false</sort.sortProperties>
 		<!-- versions-maven-plugin -->
+		<maven.version.rules>classpath:///com/github/nhojpatrick/qa/versions/rules/rules.xml</maven.version.rules>
 		<!-- JPMS -->
 	</properties>
 </project>
