@@ -236,6 +236,7 @@ workflows:
             branches:
               ignore:
                 - develop
+                - main
                 - master
           matrix:
             parameters:
@@ -253,6 +254,7 @@ workflows:
             branches:
               ignore:
                 - develop
+                - main
                 - master
 
       - passed_qa:
