@@ -93,4 +93,7 @@
 	<!--dependencyManagement / -->
 	<!--distributionManagement / -->
 	<!--properties / -->
+	<properties>
+		<spotbugs.maxAllowedViolations>2</spotbugs.maxAllowedViolations>
+	</properties>
 </project>
