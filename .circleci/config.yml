@@ -128,7 +128,7 @@ jobs:
       - image: cimg/openjdk:8.0
     resource_class: small
     steps:
-      - setup_std_toolchain
+      #- setup_std_toolchain
       - checkout
       - cache_restore:
           cacheAlphaName: jdk8
@@ -146,7 +146,7 @@ jobs:
       - image: cimg/openjdk:8.0
     resource_class: small
     steps:
-      - setup_std_toolchain
+      #- setup_std_toolchain
       - checkout
       - cache_restore:
           cacheAlphaName: << parameters.qa_step_profile >>
