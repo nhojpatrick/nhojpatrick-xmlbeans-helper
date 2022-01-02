@@ -476,7 +476,7 @@
 		<plugins.maven.maven-resources-plugin>2.7</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-scm-plugin>1.12.2</plugins.maven.maven-scm-plugin>
 		<plugins.maven.maven-scm-publish-plugin>3.1.0</plugins.maven.maven-scm-publish-plugin>
-		<plugins.maven.maven-site-plugin>3.4</plugins.maven.maven-site-plugin>
+		<plugins.maven.maven-site-plugin>3.10.0</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>2.19</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
