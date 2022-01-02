@@ -44,4 +44,7 @@
 	<!--dependencyManagement / -->
 	<!--distributionManagement / -->
 	<!--properties / -->
+	<properties>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.xmlbeans.testing</project.Automatic-Module-Name>
+	</properties>
 </project>

@@ -81,6 +81,7 @@
 	<!--distributionManagement / -->
 	<!--properties / -->
 	<properties>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.xmlbeans.testing.xsd</project.Automatic-Module-Name>
 		<schema.filename>${project.artifactId}.xsd</schema.filename>
 		<schema>src/main/resources/${schema.filename}</schema>
 	</properties>
