@@ -318,20 +318,14 @@
 					<version>${plugins.org.jacoco.jacoco-maven-plugin}</version>
 					<executions>
 						<execution>
-							<id>default-prepare-agent</id>
+							<id>jacoco-prepare-agent</id>
 							<goals>
 								<goal>prepare-agent</goal>
 							</goals>
 						</execution>
 						<execution>
-							<id>default-report</id>
-							<phase>site</phase>
-							<goals>
-								<goal>report</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>default-check</id>
+							<id>jacoco-check</id>
+							<phase>validate</phase>
 							<goals>
 								<goal>check</goal>
 							</goals>
@@ -339,17 +333,33 @@
 								<rules>
 									<rule>
 										<element>BUNDLE</element>
+										<excludes>
+											<exclude>*Test</exclude>
+											<exclude>*IT</exclude>
+										</excludes>
 										<limits>
 											<limit>
-												<counter>COMPLEXITY</counter>
+												<counter>LINE</counter>
 												<value>COVEREDRATIO</value>
-												<minimum>0.60</minimum>
+												<minimum>${jacoco.bundle.line.coveredratio}</minimum>
+											</limit>
+											<limit>
+												<counter>CLASS</counter>
+												<value>MISSEDCOUNT</value>
+												<maximum>${jacoco.bundle.class.missedcount}</maximum>
 											</limit>
 										</limits>
 									</rule>
 								</rules>
-								<haltOnFailure>false</haltOnFailure>
+								<!--<haltOnFailure>false</haltOnFailure>-->
 							</configuration>
+						</execution>
+						<execution>
+							<id>default-report</id>
+							<phase>site</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
 						</execution>
 					</executions>
 				</plugin>
@@ -700,6 +710,8 @@
 		<version.org.testng>7.4.0</version.org.testng>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
+		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
+		<jacoco.bundle.line.coveredratio>100%</jacoco.bundle.line.coveredratio>
 		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
 		<spotbugs.maxAllowedViolations>0</spotbugs.maxAllowedViolations>
 		<!-- checkstyle -->
