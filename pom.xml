@@ -195,6 +195,17 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>${plugins.maven.maven-jar-plugin}</version>
+					<configuration>
+						<archive>
+							<manifestEntries>
+								<Automatic-Module-Name>${project.Automatic-Module-Name}</Automatic-Module-Name>
+								<Multi-Release>true</Multi-Release>
+							</manifestEntries>
+						</archive>
+						<excludes>
+							<exclude>**/ModuleInfoHack.class</exclude>
+						</excludes>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -340,6 +351,11 @@
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
 					<version>${plugins.org.jacoco.jacoco-maven-plugin}</version>
+					<configuration>
+						<excludes>
+							<exclude>META-INF/versions/**</exclude>
+						</excludes>
+					</configuration>
 					<executions>
 						<execution>
 							<id>jacoco-prepare-agent</id>
