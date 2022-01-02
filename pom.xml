@@ -384,6 +384,22 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>qa_pmd</id>
+			<build>
+				<defaultGoal>verify</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-pmd-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<pmd.verbose>true</pmd.verbose>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
+		<profile>
 			<id>codequality</id>
 			<build>
 				<plugins>
