@@ -73,9 +73,21 @@
 					<artifactId>maven-checkstyle-plugin</artifactId>
 					<version>${plugins.maven.maven-checkstyle-plugin}</version>
 					<configuration>
-						<failsOnError>false</failsOnError>
-						<failOnViolation>false</failOnViolation>
+						<consoleOutput>true</consoleOutput>
+						<failsOnError>true</failsOnError>
 					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>com.github.nhojpatrick.qa</groupId>
+							<artifactId>nhojpatrick-checkstyle-rules</artifactId>
+							<version>[1.0.1,1.0.999)</version>
+						</dependency>
+						<dependency>
+							<groupId>com.puppycrawl.tools</groupId>
+							<artifactId>checkstyle</artifactId>
+							<version>${version.com.puppycrawl.tools.checkstyle}</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -495,9 +507,12 @@
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.7.5.201505241946</plugins.org.jacoco.jacoco-maven-plugin>
 		<!-- dependency versions -->
+		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
 		<!-- qa user properties -->
+		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
 		<!-- checkstyle -->
+		<checkstyle.config.location>com/github/nhojpatrick/qa/checkstyle/rules/rules.xml</checkstyle.config.location>
 		<!-- sortpom -->
 		<sort.createBackupFile>false</sort.createBackupFile>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
