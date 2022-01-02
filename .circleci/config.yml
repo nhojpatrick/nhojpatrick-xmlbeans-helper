@@ -184,6 +184,36 @@ jobs:
       - cache_save:
           cacheSaveName: << parameters.qa_step_profile >>
 
+  qa_owasp_dependency_check:
+    docker:
+      - image: cimg/openjdk:8.0
+    resource_class: medium
+    steps:
+      #- install_openjdk_11
+      #- setup_std_toolchain
+      - checkout
+      - cache_restore:
+          cacheAlphaName: owasp-dependency-check
+          cacheBravoName: jdk8
+      - run: date +"%Y_%V" | tee .YEAR_WEEK
+      - restore_cache:
+          keys:
+            - m2-owasp-dependency-check-data-{{ checksum ".YEAR_WEEK" }}
+      - run: mkdir -p ~/.m2/owasp-dependency-check-data
+      - run:
+          command: ./mvnw -N -Pcicd org.owasp:dependency-check-maven:update-only -DdataDirectory=~/.m2/owasp-dependency-check-data
+          no_output_timeout: 30m
+      - run:
+          command: ./mvnw -Pcicd,qa_owasp-dependency-check -DskipTests verify -DdataDirectory=~/.m2/owasp-dependency-check-data
+          no_output_timeout: 30m
+      - cache_save:
+          cacheSaveName: owasp-dependency-check
+      - save_cache:
+          key: m2-owasp-dependency-check-data-{{ checksum ".YEAR_WEEK" }}
+          paths:
+            - ~/.m2/owasp-dependency-check-data
+          when: always
+
 workflows:
   version: 2
   build_all:
@@ -215,6 +245,15 @@ workflows:
                 "pmd",
                 "spotbugs"
               ]
+
+      - qa_owasp_dependency_check:
+          requires:
+            - passed_builds
+          filters:
+            branches:
+              ignore:
+                - develop
+                - master
 
       - passed_qa:
           requires:
