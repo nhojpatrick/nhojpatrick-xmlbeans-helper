@@ -247,7 +247,7 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.7.5.201505241946</version>
+					<version>${plugins.org.jacoco.jacoco-maven-plugin}</version>
 					<executions>
 						<execution>
 							<id>default-prepare-agent</id>
@@ -395,7 +395,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.5.201505241946</version>
+				<version>${plugins.org.jacoco.jacoco-maven-plugin}</version>
 			</plugin>
 		</plugins>
 	</reporting>
@@ -473,6 +473,7 @@
 		<plugins.maven.maven-surefire-plugin>2.19</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
+		<plugins.org.jacoco.jacoco-maven-plugin>0.7.5.201505241946</plugins.org.jacoco.jacoco-maven-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
