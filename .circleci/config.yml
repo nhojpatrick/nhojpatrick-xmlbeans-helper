@@ -121,7 +121,7 @@ jobs:
 
   jdk8:
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:12.0
     resource_class: small
     steps:
       - setup_std_toolchain
@@ -138,7 +138,7 @@ jobs:
       qa_step_profile:
         type: string
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:12.0
     resource_class: small
     steps:
       - setup_std_toolchain
