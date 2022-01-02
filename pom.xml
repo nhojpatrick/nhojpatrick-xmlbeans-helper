@@ -420,6 +420,20 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>qa_jacoco</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
+		<profile>
 			<id>qa_javadoc</id>
 			<build>
 				<defaultGoal>verify</defaultGoal>
