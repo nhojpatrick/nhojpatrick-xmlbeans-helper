@@ -212,6 +212,11 @@
 					<version>${plugins.maven.maven-surefire-plugin}</version>
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-toolchains-plugin</artifactId>
+					<version>${plugins.maven.maven-toolchains-plugin}</version>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>${plugins.codehaus.build-helper-maven-plugin}</version>
@@ -458,6 +463,7 @@
 		<plugins.maven.maven-site-plugin>3.4</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>2.19</plugins.maven.maven-surefire-plugin>
+		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
