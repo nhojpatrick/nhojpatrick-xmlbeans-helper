@@ -316,6 +316,11 @@
 						</execution>
 					</executions>
 				</plugin>
+				<plugin>
+					<groupId>org.owasp</groupId>
+					<artifactId>dependency-check-maven</artifactId>
+					<version>${plugins.org.owasp.dependency-check-maven}</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -513,6 +518,7 @@
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.7.5.201505241946</plugins.org.jacoco.jacoco-maven-plugin>
+		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
 		<!-- dependency versions -->
 		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
 		<!-- qa user properties -->
