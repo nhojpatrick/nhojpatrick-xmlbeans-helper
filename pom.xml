@@ -360,6 +360,30 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>qa_javadoc</id>
+			<build>
+				<defaultGoal>verify</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>javadoc-check</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>javadoc</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
+		<profile>
 			<id>codequality</id>
 			<build>
 				<plugins>
