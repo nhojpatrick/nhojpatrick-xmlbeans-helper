@@ -237,6 +237,14 @@
 					<version>2.3.3</version>
 				</plugin>
 				<plugin>
+					<groupId>org.eluder.coveralls</groupId>
+					<artifactId>coveralls-maven-plugin</artifactId>
+					<version>${plugins.org.eluder.coveralls.coveralls-maven-plugin}</version>
+					<configuration>
+						<repoToken>${COVERALLS_REPO_TOKEN}</repoToken>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
 					<version>0.7.5.201505241946</version>
@@ -464,6 +472,7 @@
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>2.19</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<!-- dependency versions -->
 		<!-- qa user properties -->
 		<!-- checkstyle -->
