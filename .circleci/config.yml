@@ -175,7 +175,8 @@ workflows:
               qa_step_profile: [
                 "checkstyle",
                 "javadoc",
-                "pmd"
+                "pmd",
+                "spotbugs"
               ]
 
       - passed_qa:
