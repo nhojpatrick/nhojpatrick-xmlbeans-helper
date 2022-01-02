@@ -1,14 +1,106 @@
 version: 2.1
 
+commands:
+
+  std_mvnw_jdk8:
+    description: "Standard JDK8 mvnw steps"
+    steps:
+      - run:
+          name: "Maven Jdk8 Clean Install"
+          command: ./mvnw -Pcicd clean verify -DskipTests
+      - run:
+          name: "Maven Jdk8 Tests"
+          command: ./mvnw -Pcicd verify
+      - run:
+          name: "Coveralls"
+          command: ./mvnw -Pcicd,qa_jacoco -DCOVERALLS_REPO_TOKEN=${COVERALLS_REPO_TOKEN} verify jacoco:report coveralls:report
+          when: on_success
+
+  cache_restore:
+    parameters:
+      cacheAlphaName:
+        type: string
+      cacheBravoName:
+        type: string
+    description: "Save Cache Step << parameters.cacheAlphaName >> << parameters.cacheBravoName >>"
+    steps:
+      - restore_cache:
+          keys:
+            - m2-wrapper-{{ checksum ".mvn/wrapper/maven-wrapper.properties" }}
+      - restore_cache:
+          keys:
+            - m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheAlphaName >>
+            - m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheBravoName >>
+            - m2-dependencies-{{ checksum "pom.xml" }}
+      - run: mkdir -p ~/.m2/repository
+      - run:
+          name: "Tidy Local Maven Repo of lastUpdated"
+          command: find ~/.m2/repository/ -name "*.lastUpdated" | xargs -ixxx dirname xxx | sort -u | xargs -ixxx rm -rfv xxx
+          when: always
+
+  cache_save:
+    parameters:
+      cacheSaveName:
+        type: string
+    description: "Save Cache Step << parameters.cacheSaveName >>"
+    steps:
+      - run: mkdir -p ~/.m2/wrapper
+      - save_cache:
+          key: m2-wrapper-{{ checksum ".mvn/wrapper/maven-wrapper.properties" }}
+          paths:
+            - ~/.m2/wrapper
+          when: always
+      - run: mkdir -p ~/.m2/repository
+      - run:
+          name: "Tidy Local Maven Repo of project before save cache"
+          command: rm -rf ~/.m2/repository/com/github/nhojpatrick/log4j2/appenders
+          when: always
+      - run:
+          name: "Tidy Local Maven Repo of lastUpdated"
+          command: find ~/.m2/repository/ -name "*.lastUpdated" | xargs -ixxx dirname xxx | sort -u | xargs -ixxx rm -rfv xxx
+          when: always
+      - save_cache:
+          key: m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheSaveName >>
+          paths:
+            - ~/.m2/repository
+          when: always
+
 jobs:
-  builds_passed:
+  passed_builds:
     machine:
       image: circleci/classic:latest
     steps:
       - run: echo "Build Passed"
 
+  passed_qa:
+    machine:
+      image: circleci/classic:latest
+    steps:
+      - run: echo "QA Passed"
+
+  jdk8:
+    docker:
+      - image: cimg/openjdk:8.0
+    resource_class: small
+    steps:
+      - checkout
+      - cache_restore:
+          cacheAlphaName: jdk8
+          cacheBravoName: jdk8
+      - std_mvnw_jdk8
+      - cache_save:
+          cacheSaveName: jdk8
+
 workflows:
   version: 2
   build_all:
     jobs:
-      - builds_passed
+      - jdk8
+
+      - passed_builds:
+          requires:
+            - jdk8
+
+      - passed_qa:
+          requires:
+            - passed_builds
