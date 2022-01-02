@@ -473,7 +473,7 @@
 			<dependency>
 				<groupId>org.testng</groupId>
 				<artifactId>testng</artifactId>
-				<version>6.9.10</version>
+				<version>${version.org.testng}</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>
@@ -521,6 +521,7 @@
 		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
 		<!-- dependency versions -->
 		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
+		<version.org.testng>6.10.0</version.org.testng>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
