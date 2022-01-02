@@ -173,7 +173,8 @@ workflows:
           matrix:
             parameters:
               qa_step_profile: [
-                "checkstyle"
+                "checkstyle",
+                "javadoc"
               ]
 
       - passed_qa:
