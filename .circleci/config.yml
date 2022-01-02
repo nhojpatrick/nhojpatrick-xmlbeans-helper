@@ -138,6 +138,20 @@ jobs:
       - cache_save:
           cacheSaveName: jdk8
 
+  jdk11:
+    docker:
+      - image: cimg/openjdk:11.0
+    resource_class: small
+    steps:
+      #- setup_std_toolchain
+      - checkout
+      - cache_restore:
+          cacheAlphaName: jdk11
+          cacheBravoName: jdk11
+      - std_mvnw_java
+      - cache_save:
+          cacheSaveName: jdk11
+
   qa_matrix:
     parameters:
       qa_step_profile:
@@ -161,10 +175,12 @@ workflows:
   build_all:
     jobs:
       - jdk8
+      - jdk11
 
       - passed_builds:
           requires:
             - jdk8
+            - jdk11
 
       - qa_matrix:
           name: qa_<< matrix.qa_step_profile >>
