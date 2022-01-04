@@ -237,7 +237,6 @@ workflows:
               ignore:
                 - develop
                 - main
-                - master
           matrix:
             parameters:
               qa_step_profile: [
@@ -255,7 +254,6 @@ workflows:
               ignore:
                 - develop
                 - main
-                - master
 
       - passed_qa:
           requires:
