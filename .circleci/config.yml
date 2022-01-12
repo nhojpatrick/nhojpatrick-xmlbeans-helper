@@ -59,7 +59,7 @@ commands:
         type: string
     description: "Standard QA Step << parameters.stepName >>"
     steps:
-      - run: ./mvnw -Pcicd,qa_<< parameters.stepName >> -DskipTests verify
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_<< parameters.stepName >> -DskipTests verify
 
   cache_restore:
     parameters:
