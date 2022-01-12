@@ -40,17 +40,17 @@ commands:
     steps:
       - run:
           name: "Maven Java Clean Install"
-          command: ./mvnw -Pcicd clean verify -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Java Tests"
-          command: ./mvnw -Pcicd verify
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify
 
   std_mvnw_coverage:
     description: "Standard mvnw coverage steps"
     steps:
       - run:
           name: "Coveralls"
-          command: ./mvnw -Pcicd,qa_jacoco -DCOVERALLS_REPO_TOKEN=${COVERALLS_REPO_TOKEN} verify jacoco:report coveralls:report
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_jacoco -DCOVERALLS_REPO_TOKEN=${COVERALLS_REPO_TOKEN} verify jacoco:report coveralls:report
           when: on_success
 
   qa_step:
@@ -204,7 +204,7 @@ jobs:
           command: ./mvnw -N -Pcicd org.owasp:dependency-check-maven:update-only -DdataDirectory=~/.m2/owasp-dependency-check-data
           no_output_timeout: 30m
       - run:
-          command: ./mvnw -Pcicd,qa_owasp-dependency-check -DskipTests verify -DdataDirectory=~/.m2/owasp-dependency-check-data
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_owasp-dependency-check -DskipTests verify -DdataDirectory=~/.m2/owasp-dependency-check-data
           no_output_timeout: 30m
       - cache_save:
           cacheSaveName: owasp-dependency-check
