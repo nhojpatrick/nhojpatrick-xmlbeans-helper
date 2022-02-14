@@ -125,7 +125,7 @@ jobs:
 
   jdk8:
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:15.0
     resource_class: small
     steps:
       #- setup_std_toolchain
@@ -140,7 +140,7 @@ jobs:
 
   jdk11:
     docker:
-      - image: cimg/openjdk:11.0
+      - image: cimg/openjdk:15.0
     resource_class: small
     steps:
       #- setup_std_toolchain
@@ -171,7 +171,7 @@ jobs:
       qa_step_profile:
         type: string
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:15.0
     resource_class: small
     steps:
       #- setup_std_toolchain
@@ -186,7 +186,7 @@ jobs:
 
   qa_owasp_dependency_check:
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:15.0
     resource_class: medium
     steps:
       #- install_openjdk_11
