@@ -809,7 +809,7 @@
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.7</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.org.owasp.dependency-check-maven>7.0.0</plugins.org.owasp.dependency-check-maven>
 		<!-- dependency versions -->
-		<version.com.github.spotbugs>4.5.3</version.com.github.spotbugs>
+		<version.com.github.spotbugs>4.6.0</version.com.github.spotbugs>
 		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.11.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
 		<version.com.mebigfatguy.sb-contrib.sb-contrib>7.4.7</version.com.mebigfatguy.sb-contrib.sb-contrib>
 		<version.com.puppycrawl.tools.checkstyle>10.0</version.com.puppycrawl.tools.checkstyle>
