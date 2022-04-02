@@ -604,6 +604,9 @@
 			</build>
 		</profile>
 		<profile>
+			<id>release</id>
+		</profile>
+		<profile>
 			<id>sortpom</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
