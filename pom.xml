@@ -605,6 +605,9 @@
 		</profile>
 		<profile>
 			<id>release</id>
+			<build>
+				<defaultGoal>gitflow:release</defaultGoal>
+			</build>
 		</profile>
 		<profile>
 			<id>sortpom</id>
