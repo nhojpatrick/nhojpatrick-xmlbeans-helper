@@ -12,3 +12,6 @@ Helpers for testing of XMLBeans
 ## Building
 
 See [BUILDING.md](./BUILDING.md).
+
+## Releasing
+See [RELEASE.md](./RELEASE.md).
