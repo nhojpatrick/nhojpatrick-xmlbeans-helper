@@ -348,7 +348,7 @@
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
 							<artifactId>nhojpatrick-versions-ruleset</artifactId>
-							<version>[1.0.0,1.0.999)</version>
+							<version>[1.0.0,1.2.0)</version>
 						</dependency>
 					</dependencies>
 				</plugin>
