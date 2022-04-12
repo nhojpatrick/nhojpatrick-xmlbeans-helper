@@ -616,6 +616,9 @@
 			<build>
 				<defaultGoal>gitflow:release</defaultGoal>
 			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
 		</profile>
 		<profile>
 			<id>sortpom</id>
