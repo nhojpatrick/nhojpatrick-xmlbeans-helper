@@ -108,6 +108,7 @@
 								<version>${version.jp.skypencil.findbugs.slf4j.bug-pattern}</version>
 							</plugin>
 						</plugins>
+						<onlyAnalyze>com.github.nhojpatrick.xmlbeans.*</onlyAnalyze>
 					</configuration>
 					<dependencies>
 						<dependency>
