@@ -175,12 +175,6 @@
 					<version>${plugins.maven.maven-deploy-plugin}</version>
 				</plugin>
 				<plugin>
-					<!-- requires this version as 2.8+ dropped eclipse:m2eclipse -->
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-eclipse-plugin</artifactId>
-					<version>2.7</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
 					<version>${plugins.maven.maven-enforcer-plugin}</version>
