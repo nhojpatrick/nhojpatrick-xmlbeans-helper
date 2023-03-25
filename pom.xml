@@ -902,7 +902,7 @@
 		<version.com.puppycrawl.tools.checkstyle>10.9.3</version.com.puppycrawl.tools.checkstyle>
 		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
 		<version.junit>4.13.2</version.junit>
-		<version.org.apache.xmlbeans>3.1.0</version.org.apache.xmlbeans>
+		<version.org.apache.xmlbeans>5.1.1</version.org.apache.xmlbeans>
 		<version.org.testng>7.5</version.org.testng>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
