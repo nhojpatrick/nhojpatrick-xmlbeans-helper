@@ -252,11 +252,6 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jxr-plugin</artifactId>
-					<version>${plugins.maven.maven-jxr-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-linkcheck-plugin</artifactId>
 					<version>1.2</version>
 				</plugin>
